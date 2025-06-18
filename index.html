@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testez notre Chatbot Intelligent - Growth-AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Archivo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://cdn.prod.website-files.com/6825df5b20329ba581df4914/6825e1130589c0001e20fe4c_relume-143542.png">
+    <link rel="shortcut icon" type="image/png" href="https://cdn.prod.website-files.com/6825df5b20329ba581df4914/6825e1130589c0001e20fe4c_relume-143542.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Archivo', sans-serif;
+            background: linear-gradient(135deg, #1B1919 0%, #FF8000 50%, #E7BF26 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 128, 0, 0.2);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            height: 120px;
+            width: auto;
+            filter: brightness(1.1);
+        }
+
+        /* Main content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-family: 'Anton SC', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            color: #FF8000;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: #E7BF26;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 50px;
+            max-width: 600px;
+            line-height: 1.7;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        /* Chatbot section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            max-width: 1000px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid rgba(231, 191, 38, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 128, 0, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #FF8000;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-family: 'Anton SC', sans-serif;
+            font-size: 1.3rem;
+            color: #1B1919;
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 128, 0, 0.2);
+        }
+
+        .footer-text {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .features {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-subtitle {
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-description {
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .features {
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <img src="https://cdn.prod.website-files.com/6825df5b20329ba581df4914/6825e1130589c0001e20fe4c_relume-143542.png" alt="Logo" class="logo">
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <h1 class="hero-title">Découvrez Growth-AI</h1>
+            <h2 class="hero-subtitle">Vous êtes ici pour tester notre solution IA</h2>
+            <p class="hero-description">
+                Explorez les capacités de notre chatbot nouvelle génération. Posez vos questions, testez ses fonctionnalités et découvrez comment il peut révolutionner votre expérience client.
+            </p>
+
+
+
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h4 class="feature-title">Réponses Instantanées</h4>
+                    <p class="feature-description">Obtenez des réponses précises et rapides à toutes vos questions</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h4 class="feature-title">Intelligence Avancée</h4>
+                    <p class="feature-description">Powered by AI pour une expérience conversationnelle naturelle</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h4 class="feature-title">Sécurité</h4>
+                    <p class="feature-description">Vos données sont protégées et vous y avez accès sur demande !</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 - Propulsé par Growth-AI</p>
+        </div>
+    </footer>
+
+    <script src="https://growth-ai-chatbot.vercel.app/chatbot.js"></script>
+</body>
+</html>
